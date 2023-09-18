@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+void pattern(int n){
+    for(int i=1;i<=n;i++){
+        int s =i;
+        if(s%2==0){
+           // int s =i;
+        for(int j=1;j<=i;j++){
+            cout<< (s%2);
+            s--;
+        }
+        }
+        else {
+            
+            for(int j=1;j<=i;j++){
+            cout<<(s%2);
+            s--;
+        }
+        }
+        cout<<endl;
+    }
+    
+}
+int main(){
+    int n;
+    cin>>n;
+
+    pattern(n);
+    return 0;
+}

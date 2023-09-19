@@ -16,7 +16,7 @@ void pattern (int n){
             cout<<"-";
         }
         
-        for(int k=i;k>=1;k--){
+        for(int k=i;k>=1;k--){ //the error that trouble me was that i gave condition k<=1, that created infite loop
             cout<<k;
         }
         s=s-2;

@@ -8,25 +8,23 @@ vector<bool>  createBlackBox(int n){
     for(int i=2;i*i<=n;i++){
     if(primee[i]==true){//mark all the values as prime till sqrt(n);
 
-        for(int j=i*i;j<=n;j+=i){//mark all multiples of primes as false
+        for(int j=i*i;j<=n;j+=i)//mark all multiples of primes as false
         primee[j]=false;
-        }
+        
     }
-
-
-    return primee;
-}}
-
+}
+return primee; }
 
 int main(){
     int n;
     cin>>n;
     vector<bool>result = createBlackBox(n);
     int query,numOFquery;
-    cin>>numOFquery;
-    while(numOFquery--){
-        cin>>query;
-        cout<<result[query]<<endl;
-    }
+   cin>>numOFquery;
+for(int i=1;i<=numOFquery;i++){
+    cin>>query;
+    cout<<result[query];
+}
+//cout<<result[99];
 return 8;
 }

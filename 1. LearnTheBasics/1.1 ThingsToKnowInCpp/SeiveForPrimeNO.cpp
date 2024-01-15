@@ -12,10 +12,9 @@ vector<bool>  createBlackBox(int n){
         primee[j]=false;
         }
     }
-
-
-    return primee;
-}}
+}
+  return primee;
+}
 
 
 int main(){

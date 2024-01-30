@@ -9,7 +9,7 @@ void secondlargest(vector <int>a) {
             secondlargest = largest;
             largest = a[i];
         }
-        else if(a[i]<largest&&a[i]>secondlargest){
+        else if(a[i]<largest&&a[i]>secondlargest){// O(N)
             secondlargest =a[i];
         }
          i++;
@@ -41,7 +41,7 @@ void secondsmallest(vector<int >a){
 }
 
 int main(){
-vector<int>a= {1,2,4,7,7,5};
+vector<int>a= {1,2,4,7,7,5};  // O(2N) optimal solution
 secondlargest(a);
 secondsmallest(a);
 

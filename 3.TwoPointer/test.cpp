@@ -1,30 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-int FindPair(vector<int>nums,int target){
-int result{0};
-sort(nums.begin(),nums.end());
-int j  =nums.size()-1;
-int i =0;
-cout<<j-i;
-
-
-/*for(int i =0;i<=n-1;i++){
-    for(int j=i+1;j<=n;j++){
-        if(nums[j]!=nums[j+1]){
-        if(nums[i]<nums[j]){
-            if(nums[i]+nums[j]<target){
-                result++;
+int FindPair(vector<int>nums,int val){
+        int i {0};
+        int j = nums.size()-1;
+        while(i<=j){
+            if(nums[j]!=val&&nums[i]==val){
+                nums[i]=nums[j];
+                i++;
+                j--;
             }
-
-        }}
-    }
-}*/
+            else if(nums[i]==val&&nums[j]==val){
+                j--;
+            }
+            else if( nums[i]!=val&&nums[j]!=val){
+                i++;
+                
+            }
+            else{
+                j--;
+            }
+            }
+            for(int k =0;k<i;k++){
+                cout<<nums[k]<<'\n';
+            }
     
 return 0;
 }
 int main(){
-vector<int>nums={1,9,1,1,1};//{-7,-6,-2,-1,2,3,5}
-int result = FindPair(nums,3);
+vector<int>nums={0,1,2,2,3,0,4,2};//{-7,-6,-2,-1,2,3,5}
+int result = FindPair(nums,2);
 //cout<<result;
 
 

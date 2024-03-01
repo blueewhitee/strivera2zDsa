@@ -1,27 +1,60 @@
 #include <bits/stdc++.h>
 using namespace std;
-    void moveZeroes(vector<int>& nums) {
-    int n = nums.size();
-    int j = 0; // Count of non-zero elements
-
-    // Traverse the array. If element encountered is non-zero, then replace the element at index 'j' with this element
-    for (int i = 0; i < n; i++)
-        if (nums[i] != 0)
-            nums[j++] = nums[i]; // here count is incremented
-
-    // Now all non-zero elements have been shifted to front and 'j' is set as index of first 0. Make all elements 0 from count to end.
-    while (j < n)
-        nums[j++] = 0;
-        
-        
+    void funcc(vector<int>& nums,int n ) {
+        vector<int>nums2;
+        int i{0};
+        int j{0};
+        while(i<n){
+            if(nums[i]!=0){
+                nums2.push_back(nums[i]);
+                j++;
+            }
+            i++;
         }
+        //int zeroes = n - nums2.size();
+        while(j<n){
+            j++;
+            nums2.push_back(0);
+        }
+        for(auto it: nums2){
+            cout<<it<<'\n';
+        }
+
+
+
+    }
+/*  BRUTE FORCE APPROACH-  
+    vector<int>nums2;
+        int i{0};
+        int j{0};
+        while(i<n){
+            if(nums[i]!=0){
+                nums2.push_back(nums[i]);
+                j++;
+            }
+            i++;
+        }
+        //int zeroes = n - nums2.size();
+        while(j<n){
+            j++;
+            nums2.push_back(0);
+        }
+        for(auto it: nums2){
+            cout<<it<<'\n';
+        }*/
+
+
+
+
+
+
 int main(){
     vector<int >nums;
     nums = {0,1,0,3,12};
-    moveZeroes(nums);
-    for(auto it :nums){
-        cout<<it;
-    }
+    int n  =  nums.size();
+
+    funcc(nums,n);
+
 
 
 return 8;

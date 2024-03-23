@@ -14,16 +14,18 @@ using namespace std;
         if(mpp.find(remainder)!=mpp.end()){
              max_lenght = max(max_lenght,i-mpp[remainder]);
         }
-        mpp[sum]=i;
+        if(mpp.find(sum)==mpp.end()){mpp[sum]=i;}
 
        }
+       for(auto it: mpp){
+        cout<<it.first<<" "<<it.second<<"\n";
+       }
        cout<<max_lenght;
-       
 
     }
 int main(){
     vector<int >nums;
-    nums = {1,2,3,1,1,1,1};
+    nums = {2,0,0,3};
     int k = 3;
     int n  =  nums.size();
 

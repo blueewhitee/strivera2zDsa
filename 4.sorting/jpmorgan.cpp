@@ -37,7 +37,7 @@ using namespace std;
     }
 int main(){
     vector<int >nums;
-    nums = {1,2,3,4};
+    nums = {1,3,2,4,5};
     int n  =  nums.size();
 
     funcc(nums,n);
